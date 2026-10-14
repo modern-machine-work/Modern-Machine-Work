@@ -1488,6 +1488,159 @@ footer {
 
 /* Work Highlights Page */
 
+/* Careers Page */
+#positions {
+    padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+    #positions {
+        padding-top: 80px;
+    }
+}
+
+/* Job Listings */
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.job-card {
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-accent);
+    border: 1px solid var(--border-accent);
+    display: flex;
+    flex-direction: column;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.job-header h3 {
+    color: var(--text-highlight);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.job-salary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.job-content {
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.job-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.job-content p strong {
+    color: var(--text-primary);
+}
+
+.job-requirements {
+    list-style: none;
+    margin-top: auto;
+    padding: 0;
+}
+
+.job-requirements li {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.job-requirements li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.apply-btn {
+    margin: 0 2rem 2rem;
+    width: fit-content;
+    justify-content: center;
+}
+
+/* Careers Application Form */
+.form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-accent);
+    border: 1px solid var(--border-accent);
+}
+
+#careers-iframe {
+    display: block;
+    border: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .job-grid {
+        gap: 1.5rem;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem 0.75rem;
+    }
+
+    .job-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .job-salary {
+        font-size: 0.8rem;
+    }
+
+    .job-content {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .apply-btn {
+        margin: 0 1rem 1.5rem;
+        width: calc(100% - 2rem);
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .form-wrapper iframe {
+        height: 800px !important;
+    }
+}
+
 /* Main Content Styles */
 .wh-container {
     max-width: 1200px;
